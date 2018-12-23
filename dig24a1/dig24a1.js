@@ -7,9 +7,14 @@ $(function() {
     sectionButtons.on('click', function (e) {
         const targetId = $(this).data('target-id');
         const target = $('#' + targetId);
-        $('html,body').animate(
-            {scrollTop: $('#' + targetId).offset().top}, 1000
-        );
+        $('html,body')
+            .animate(
+                {scrollTop: $('#' + targetId).offset().top}, 1000
+            )
+            .promise()
+            .done(function () {
+                window.location.hash = '#' + targetId;
+            });
     });
 
     // Handle image mouse over, fill and caption animation
