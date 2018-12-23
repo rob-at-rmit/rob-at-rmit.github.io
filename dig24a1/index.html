@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>DIG24 Assignment 1 Robert Beardow # </title>
     <!-- jQuery CDN link -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -43,14 +44,19 @@
                 <h2>Hello I am section 2</h2>
             </header>
             <article>
-                <p>If you roll your mouse over me or the photo, I'll fill with a colour.</p>
-                <img
-                    id="section2ImageToFill" 
-                    src="img/roasted-beans.jpg" 
-                    alt="Image of roasted coffee beans"
-                    width="1024" 
-                    height="512"
-                />
+                <p>If you roll your mouse over the photo, I'll fill it with a colour.</p>
+                <div id="section2ImageToFill">
+                    <div id="section2Overlay">
+                        <p id="section2Caption">I am a picture of some coffee beans. Click on me to restore the image.</p>
+                    </div>
+                    <img
+                        id="section2Image" 
+                        src="img/roasted-beans.jpg" 
+                        alt="Image of roasted coffee beans"
+                        width="1024" 
+                        height="512"
+                    />
+                </div>
                 <!-- Image sourced from https://theweekendedition.com.au/gold-coast/food-drink/mount-tamborine-coffee-plantation/  -->
             </article>
             <div class="btn-bar">
@@ -63,16 +69,22 @@
             </header>
             <article>
                 <p>If you click this button, I'll show you another photo 
-                    <button id="section3TriggerButton">Click me</button>
+                    <button id="section3TriggerButton"
+                        data-state="hidden"
+                        data-hidden-text="Click me to show image"
+                        data-show-text="Click me to hide image">
+                    </button>
                 </p>
-                <img
-                    id="section3ImageToAnimate" 
-                    src="img/plantation.jpg" 
-                    alt="Image of coffee plantation"
-                    width="1024" 
-                    height="512"
-                />
-                <!-- Image sourced from https://www.clicabroad.org/2015/feature/understanding-india-around-the-coffee-plantation/ -->
+                <div id="section3ImageToAnimate">
+                    <img
+                        id="section3Image" 
+                        src="img/plantation.jpg" 
+                        alt="Image of coffee plantation"
+                        width="1024" 
+                        height="512"
+                    />
+                    <!-- Image sourced from https://www.clicabroad.org/2015/feature/understanding-india-around-the-coffee-plantation/ -->
+                </div>
             </article>
             <div class="btn-bar">
                 <button class="btn go-section" data-target-id="section1">Top</button>

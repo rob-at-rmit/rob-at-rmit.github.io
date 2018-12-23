@@ -24,7 +24,7 @@ footer a:hover {
 }
 
 section {
-    margin: 0 auto 50px auto;
+    margin: 0 auto 150px auto;
     width: 1080px;
     padding: 10px;
     border: 1px solid #DDD;
@@ -66,14 +66,23 @@ section .btn-bar {
     background-color: #EEE;
 }
 
-#section1 {
-
+#section2Overlay {
+    display: inline-block;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #EEE;
+    width: 1024px;
+    opacity: 0;
+    background-color: #EEE;
 }
 
-#section2 {
-
+#section2Caption {
+    text-align: center;
+    position: relative;
+    top: 0;
+    opacity: 0;
 }
 
-#section3 {
-
+#section3Image {
+    display: none;
 }
