@@ -2,7 +2,9 @@ $(function() {
 
     // Handle button navigation
     // When buttons are clicked, they will look for the target 
-    // element ID in a data attribute and animate to it.
+    // element ID in a data attribute and animate to it. 
+    // When the animation is finished, the section location is 
+    // pushed onto into the address bar.
     const sectionButtons = $('button.go-section');
     sectionButtons.on('click', function (e) {
         const targetId = $(this).data('target-id');
@@ -16,6 +18,7 @@ $(function() {
                 window.location.hash = '#' + targetId;
             });
     });
+
 
     // Handle image mouse over, fill and caption animation
     // When the image is moused over, the animation of the
