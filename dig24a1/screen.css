@@ -10,19 +10,6 @@ header h1 {
     text-align: center;
 }
 
-footer {
-    text-align: center;
-    font-size: 0.8em;
-    color: #888;
-}
-
-footer a {
-    color: #888;
-}
-footer a:hover {
-    color: #CCC;
-}
-
 section {
     margin: 0 auto 150px auto;
     width: 1080px;
@@ -85,4 +72,21 @@ section .btn-bar {
 
 #section3Image {
     display: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #888;
+}
+
+footer a {
+    color: #888;
+}
+footer a:hover {
+    color: #CCC;
+}
+
+footer .reference {
+    font-size: 0.9em;
 }
