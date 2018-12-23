@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>DIG24 Assignment 1 Robert Beardow # </title>
+    <!-- jQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <!-- jQuery local fallback -->
+    <script>
+        window.jQuery || document.write('<script src="lib/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <link rel="stylesheet" type="text/css" href="screen.css">
+</head>
+<body>
+    <header>
+        <h1>DIG24 Assignment 1 Technical Exercise</h1>
+    </header>
+    <main>
+        <section id="section1">
+            <header>
+                <h2>Hello I am section 1</h2>
+            </header>
+            <article>
+                <p>I don't do anything, I'm just a photo.</p>
+                <img
+                    id="section1Image" 
+                    src="img/coffee.jpg" 
+                    alt="Image of black coffee next to a latte"
+                    width="1024" 
+                    height="512"
+                />
+                <!-- Image sourced from https://www.roastycoffee.com/coffee-espresso/ -->
+            </article>
+            <div class="btn-bar">
+                <button class="btn go-section" data-target-id="section2">Next</button>
+            </div>
+        </section>
+        <section id="section2">
+            <header>
+                <h2>Hello I am section 2</h2>
+            </header>
+            <article>
+                <p>If you roll your mouse over me or the photo, I'll fill with a colour.</p>
+                <img
+                    id="section2ImageToFill" 
+                    src="img/roasted-beans.jpg" 
+                    alt="Image of roasted coffee beans"
+                    width="1024" 
+                    height="512"
+                />
+                <!-- Image sourced from https://theweekendedition.com.au/gold-coast/food-drink/mount-tamborine-coffee-plantation/  -->
+            </article>
+            <div class="btn-bar">
+                <button class="btn go-section" data-target-id="section3">Next</button>
+            </div>
+        </section>
+        <section id="section3">
+            <header>
+                <h2>Hello I am section 3</h2>
+            </header>
+            <article>
+                <p>If you click this button, I'll show you another photo 
+                    <button id="section3TriggerButton">Click me</button>
+                </p>
+                <img
+                    id="section3ImageToAnimate" 
+                    src="img/plantation.jpg" 
+                    alt="Image of coffee plantation"
+                    width="1024" 
+                    height="512"
+                />
+                <!-- Image sourced from https://www.clicabroad.org/2015/feature/understanding-india-around-the-coffee-plantation/ -->
+            </article>
+            <div class="btn-bar">
+                <button class="btn go-section" data-target-id="section1">Top</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="mailto:robert.beardow@student.curtin.edu.au">Robert Beardow</a> Student Number <strong>19209676</strong></p>
+        <p>DIG24 Assignment 1 Techical Exercise</p>
+    </footer>
+    <!-- Source for Assignment 1 -->
+    <script src="dig24a1.js"></script>
+</body>
+</html>
