@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DIG24 Assignment 3 | Robert Beardow #19209676</title>
+    <!-- jQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <!-- jQuery local fallback -->
+    <script>
+        window.jQuery || document.write('<script src="lib/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <!-- Style and script source for Assignment 3 -->
+    <script src="dig24a3.js"></script>
+    <link rel="stylesheet" type="text/css" href="dig24a3.css">
+    <link rel="stylesheet" type="text/css" href="dig24a3-plunger.css">
+</head>
+<body>
+    <div id="bbox">
+        <header>
+            <h1>Coffee: <span class="h1-sub">Plantation to Preparation</span></h1>
+        </header>
+        <main>
+            <div id="maingrid">
+                <div id="plunger">
+                    <div id="plungerNav">
+                        <a data-target="plantations">Plantations &amp;<br/> Beans</a>
+                        <a data-target="roasting">Roasting</a>
+                        <a data-target="grinding">Grinding</a>
+                        <a data-target="preparation">Preparation</a>
+                    </div>
+                    <div id="plungerCap"></div>
+                    <div id="plungerPlunger">
+                        <div id="plungerRodCap"></div>
+                        <div id="plungerRod">&nbsp;</div>
+                        <div id="plungerFilter"></div>
+                    </div>
+                    <div id="plungerHandle"></div>
+                    
+                    <div id="plungerSpout">
+                        <div id="plungerSpoutCap"></div>
+                        <div id="plungerSpoutSpout"></div>
+                        <div id="plungerSpoutWedge"></div>
+                    </div>
+                    <div id="plungerOutline"></div>
+                    <div id="plungerCoffee">
+                        <div id="plungerCoffeeBubble1" class="plunger-coffee-bubble-start-1"></div>
+                        <div id="plungerCoffeeBubble2" class="plunger-coffee-bubble-start-2"></div>
+                    </div>
+                    <div id="plungerFeet"></div>
+
+                </div>
+                <div id="content">
+
+                    <section id="plantations" class="topic">
+
+                        <header>
+                            <div class="topic-content">
+                                <h2 class="topic-header">Plantations &amp; Beans</h2>
+                                <div class="topic-detail">
+                                    <p> Morbi dolor ante, dapibus et tortor ut, semper vehicula lacus. Vestibulum ex urna</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="subarticles-wrapper">
+                            <div class="subarticles">
+
+                                <article class="subarticle subarticle-1">
+                                    <h4 class="subarticle-headercontent">Single-origin</h4>
+                                    <div class="subarticle-hovercontent">Learn more about single-origin plantations</div>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                                <article class="subarticle subarticle-2">
+                                    <h4 class="subarticle-headercontent">Arabica</h4>
+                                    <p class="subarticle-hovercontent">Learn more about arabica plantations</p>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                                <article class="subarticle subarticle-3">
+                                    <h4 class="subarticle-headercontent">Robusta</h4>
+                                    <p class="subarticle-hovercontent">Learn more about robusta plantations</p>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="topic-nav">
+                            <button class="topic-navbutton" data-target="roasting">Next</button>
+                        </div>
+
+                    </section>
+
+                    <section id="roasting" class="topic" style="display:none;">
+
+                        <header>
+                            <div class="topic-content">
+                                <h2 class="topic-header">Roasting</h2>
+                                <div class="topic-detail">
+                                    <p> Morbi dolor ante, dapibus et tortor ut, semper vehicula lacus. Vestibulum ex urna</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="subarticles-wrapper">
+                            <div class="subarticles">
+                                <article class="subarticle subarticle-1">
+                                    <h4 class="subarticle-headercontent">Dark Roast</h4>
+                                    <div class="subarticle-hovercontent">Learn more about single-origin plantations</div>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                                <article class="subarticle subarticle-2">
+                                    <h4 class="subarticle-headercontent">Medium Roast</h4>
+                                    <p class="subarticle-hovercontent">Learn more about arabica plantations   </p>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                                <article class="subarticle subarticle-3">
+                                    <h4 class="subarticle-headercontent">Light Roast</h4>
+                                    <p class="subarticle-hovercontent">Learn more about robusta plantations</p>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="topic-nav">
+                            <button class="topic-navbutton" data-target="plantations">Previous</button>
+                            <button class="topic-navbutton" data-target="grinding">Next</button>
+                        </div>
+
+                    </section>
+
+                    <section id="grinding" class="topic" style="display:none;">
+
+                        <header>
+                            <div class="topic-content">
+                                <h2 class="topic-header">Grinding</h2>
+                                <div class="topic-detail">
+                                    <p> Morbi dolor ante, dapibus et tortor ut, semper vehicula lacus. Vestibulum ex urna</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="subarticles-wrapper">
+                            <div class="subarticles">
+                                <article class="subarticle subarticle-1">
+                                    <h4 class="subarticle-headercontent">Fine Grind</h4>
+                                    <div class="subarticle-hovercontent">Learn more about single-origin plantations</div>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                                <article class="subarticle subarticle-2">
+                                    <h4 class="subarticle-headercontent">Medium Grind</h4>
+                                    <p class="subarticle-hovercontent">Learn more about arabica plantations   </p>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                                <article class="subarticle subarticle-3">
+                                    <h4 class="subarticle-headercontent">Course Grind</h4>
+                                    <p class="subarticle-hovercontent">Learn more about robusta plantations</p>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="topic-nav">
+                            <button class="topic-navbutton" data-target="roasting">Previous</button>
+                            <button class="topic-navbutton" data-target="preparation">Next</button>
+                        </div>
+
+                    </section>
+
+                    <section id="preparation" class="topic" style="display:none;">
+
+                        <header>
+                            <div class="topic-content">
+                                <h2 class="topic-header">Preparation</h2>
+                                <div class="topic-detail">
+                                    <p> Morbi dolor ante, dapibus et tortor ut, semper vehicula lacus. Vestibulum ex urna</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="subarticles-wrapper">
+                            <div class="subarticles">
+                                <article class="subarticle subarticle-1">
+                                    <h4 class="subarticle-headercontent">Espresso</h4>
+                                    <div class="subarticle-hovercontent">Learn more about single-origin plantations</div>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                                <article class="subarticle subarticle-2">
+                                    <h4 class="subarticle-headercontent">French Press</h4>
+                                    <p class="subarticle-hovercontent">Learn more about arabica plantations   </p>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                                <article class="subarticle subarticle-3">
+                                    <h4 class="subarticle-headercontent">Filter/Brew</h4>
+                                    <p class="subarticle-hovercontent">Learn more about robusta plantations</p>
+                                    <div class="subarticle-detailedcontent">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                        <p>Ut porta placerat lorem non mollis. Phasellus consequat metus quis dui laoreet tempus. Donec sit amet tincidunt nisl, sed hendrerit leo. Nullam fermentum massa id tincidunt auctor. Sed ultricies eleifend ante eget facilisis. Fusce non enim posuere, tincidunt tortor sed, volutpat urna. Nulla pharetra leo ultrices felis accumsan viverra.</p>
+                                    </div>
+                                    <div class="subarticle-caption">Ut porta placerat lorem non mollis. Phasellus consequat.</div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="topic-nav">
+                            <button class="topic-navbutton" data-target="grinding">Previous</button>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p><a href="mailto:robert.beardow@student.curtin.edu.au">Robert Beardow</a> Student Number <strong>19209676</strong>, Study Period 4, 2018</p>
+            <p>DIG24 Assignment 3. Coffee: Plantation to preparation</p>
+        </footer>
+    </div>
+</body>
+</html>

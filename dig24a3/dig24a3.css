@@ -1,0 +1,261 @@
+body {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    font-family: 'Arial Narrow', Helvetica, sans-serif;
+    color: #333;
+}
+
+#bbox {
+    margin: 20px auto 0 auto;
+    width: 1200px;
+}
+
+main {
+
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#maingrid {
+    display: grid;
+    grid-template-columns: 340px auto ;
+}
+
+#content {
+    position: relative;
+    margin-top: 5px;
+    min-height: 522px;
+    height: 522px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#content .topic {
+    min-height: 512px;
+}
+
+#content .topic-detail {
+    width: 300px;
+    color: #333;
+}
+
+#content section {
+    box-shadow: 0 0 20px 20px white inset;
+    clear: both;
+}
+
+#content section header {
+    margin: 0;
+    padding: 20px;
+}
+
+#content section header h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#content section header {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#content .topic-nav {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+}
+
+#content .topic-navbutton {
+    cursor: pointer;
+    display: inline-block;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    border: 1px solid #DDD;
+    color: #333;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    background-color:  rgba(255,255,255,0.2);
+    transition: 0.5s;
+    font-size: 0.78em;
+    text-align: center;
+}
+
+#content .topic-navbutton:focus {
+    outline: 0;
+}
+
+#content .topic-navbutton:hover {
+    color: #111;
+    background-color:  #EEE;
+    transition: 0.5s;
+}
+
+#content .subarticles {
+    width: 100%;
+    height: 127px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#content .subarticle {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    width: 192px;
+    min-height: 127px;
+    margin-right: 10px;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% 100%;
+}
+
+#content .subarticle-1 {
+    left: 10px;
+}
+
+#content .subarticle-2 {
+    left: 220px;
+}
+
+#content .subarticle-3 {
+    left: 430px;
+}
+
+#content .subarticle h4 {
+    color: #FFF;
+    margin: 0;
+    padding: 0 0 5px 0;
+    text-shadow: 0px 0px 2px rgba(0,0,0,1);
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+#content .subarticle-hovercontent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    color: #FFF;
+    margin: 0;
+    padding: 0 0 10px 10px;
+    font-size: 0.7em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#content .subarticle-detailedcontent {
+    display: none;
+    position: absolute;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    transition: 0.8s;
+}
+
+#content .subarticle-caption {
+    display: none;
+    background-color: #000;
+    color: #FFF;
+    height: 30px;
+    margin: -5px;
+    padding: 10px;
+    font-size: 0.7em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0.7;
+    margin: 261px -5px -5px -5px;
+}
+
+/*------------------------------------------------------------------------------
+/* Plantation backgrounds
+/*----------------------------------------------------------------------------*/
+
+#plantations .subarticle-1 {
+    background-image: url(img/backgrounds/singleorigin.png);
+}
+
+#plantations .subarticle-2 {
+    background-image: url(img/backgrounds/arabica.png);
+}
+
+#plantations .subarticle-3 {
+    background-image: url(img/backgrounds/robusta.png);
+}
+
+/*------------------------------------------------------------------------------
+/* Roasting backgrounds
+/*----------------------------------------------------------------------------*/
+
+#roasting .subarticle-1 {
+    background-image: url(img/backgrounds/darkroast.png);
+}
+
+#roasting .subarticle-2 {
+    background-image: url(img/backgrounds/mediumroast.png);
+}
+
+#roasting .subarticle-3 {
+    background-image: url(img/backgrounds/lightroast.png);
+}
+
+/*------------------------------------------------------------------------------
+/* Grinding backgrounds
+/*----------------------------------------------------------------------------*/
+
+#grinding .subarticle-1 {
+    background-image: url(img/backgrounds/finegrind.png);
+}
+
+#grinding .subarticle-2 {
+    background-image: url(img/backgrounds/mediumgrind.png);
+}
+
+#grinding .subarticle-3 {
+    background-image: url(img/backgrounds/coarsegrind.png);
+}
+
+/*------------------------------------------------------------------------------
+/* Preparation backgrounds
+/*----------------------------------------------------------------------------*/
+
+#preparation .subarticle-1 {
+    background-image: url(img/backgrounds/espresso.png);
+}
+
+#preparation .subarticle-2 {
+    background-image: url(img/backgrounds/frenchpress.png);
+}
+
+#preparation .subarticle-3 {
+    background-image: url(img/backgrounds/filter.png);
+}
+
+
+
+footer {
+    text-align: left;
+    font-size: 0.7em;
+    color: #888;
+}
+
+footer a {
+    color: #888;
+}
+footer a:hover {
+    color: #CCC;
+}
+
+footer .reference {
+    font-size: 0.9em;
+}
