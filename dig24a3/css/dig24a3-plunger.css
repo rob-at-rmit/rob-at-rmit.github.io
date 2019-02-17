@@ -1,3 +1,10 @@
+/**
+ * DIG24 Programming for Digital Design, Study Period 4 2018/2019.
+ * Assignment 3
+ * Robert Beardow, Student ID 19209676.
+ * 
+ * This is the CSS styling for the pure-CSS coffee plunger on the left hand side.
+ */
 
 #plunger {
     background-color: #fff;
@@ -7,7 +14,7 @@
 #plungerNav {
     position: absolute;
     margin-left: 172px;
-    top: 200px;
+    top: 290px;
 }
 
 #plungerNav a {
@@ -15,7 +22,13 @@
     cursor: pointer;
     font-size: 0.8em;
     padding: 5px 5px 50px 10px;
+    color: #999;
     border-top: 3px solid #999;
+}
+
+#plungerNav a:hover, #plungerNav a.on {
+    border-top: 3px solid #333;
+    color: #333;
 }
 
 #plungerCap {

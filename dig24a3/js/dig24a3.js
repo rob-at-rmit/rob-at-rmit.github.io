@@ -1,3 +1,10 @@
+/**
+ * DIG24 Programming for Digital Design, Study Period 4 2018/2019.
+ * Assignment 3
+ * Robert Beardow, Student ID 19209676.
+ * 
+ * This is the consolidated javascript file for assignment 3.
+ */
 $(function() {
 
     /*
@@ -175,8 +182,8 @@ $(function() {
     };
 
     /**
-     * Handle what happens when an article is hovered over.
-     * Handle both the small and highlighted scenarios.
+     * Handle what happens when an article is hovered over. Handle both the 
+     * small and highlighted scenarios.
      */
     const handleArticleHoverOver = function() {
 
@@ -195,8 +202,8 @@ $(function() {
     };
 
     /**
-     * Handle what happens when an article is hovered out.
-     * Handle both the small and highlighted scenarios.
+     * Handle what happens when an article is hovered out. Handle both the small 
+     * and highlighted scenarios.
      */
     const handleArticleHoverOut = function() {
 
@@ -221,9 +228,11 @@ $(function() {
     articles.on("click", function() { handleToggleArticle($(this)); });
     articles.hover(handleArticleHoverOver, handleArticleHoverOut);
 
-
-
+    /**
+     * Constants for plunger animation and navigation.
+     */
     const PLUNGER_DURATION = 2000;
+    const PLUNGER_STATE_PLUNGING = "plunger-state-plunging";
 
     const plunger = $("#plungerPlunger");
     const plungerRod = $("#plungerRod");
@@ -231,6 +240,7 @@ $(function() {
     const plungerCoffee = $("#plungerCoffee");
     const plungerBubble1 = $("#plungerCoffeeBubble1");
     const plungerBubble2 = $("#plungerCoffeeBubble2");
+    const plungerNav = $("#plungerNav");
 
     const plungerSteps = {
         "plantations": {height: "95px"},
@@ -238,6 +248,11 @@ $(function() {
         "grinding": {height: "270px"},
         "preparation": {height: "340px"}
     };
+
+    /**
+     * Determines whether the plunger is currently animating.
+     */
+    const isPlungerPlunging = () => plunger.hasClass(PLUNGER_STATE_PLUNGING);
 
     /**
      * Handle main plunger animation.
@@ -248,24 +263,62 @@ $(function() {
         plungerBubble1.addClass("plunger-coffee-bubble-end-1");
         plungerBubble2.addClass("plunger-coffee-bubble-end-2");
 
+        plunger.addClass(PLUNGER_STATE_PLUNGING);
+
         return plungerRod.animate(step, PLUNGER_DURATION).promise().then( () => {
             plungerBubble1.removeClass("plunger-coffee-bubble-end-1");
             plungerBubble2.removeClass("plunger-coffee-bubble-end-2");
+            plunger.removeClass(PLUNGER_STATE_PLUNGING);
         });
     };
 
-    const navButton = $(".topic-navbutton");
-    navButton.on("click", function(e) {
+    /**
+     * Returns the currently visible topic
+     */
+    const findCurrentTopic = () => $("section.topic:visible");
+
+    /**
+     * Transitions between the current topic and the target topic
+     */
+    const transitionTopics = (current, target) => {
+        current.fadeOut("slow").promise().then(() => target.fadeIn("slow"));
+    };
+
+    /**
+     * Handle navigation of the topic next/previous buttons
+     */
+    const navButtons = $(".topic-navbutton");
+    navButtons.on("click", function(e) {
 
         const button = $(this);
         const topic = button.parents("section");
         const targetId = button.data("target");
+        const target = $("#" + targetId);
 
         animatePlungerToStep(targetId);
-        const target = $("#" + targetId);
-        topic.fadeOut("slow").promise().then(() => target.fadeIn("slow"));
+        transitionTopics(topic, target);
 
     });
 
-    
+    /**
+     * Handle navigation of the plunger navigation options
+     */
+    const plungerNavButtons = plungerNav.find("a[data-target]");
+    plungerNavButtons.on("click", function(e) {
+
+        const button = $(this);
+        const topic = findCurrentTopic();
+        const targetId = button.data("target");
+        const target = $("#" + targetId);
+        const alreadySelected = button.hasClass("on");
+
+        if (!alreadySelected) {
+            plungerNavButtons.removeClass("on");
+            button.addClass("on");
+            animatePlungerToStep(targetId);
+            transitionTopics(topic, target);
+        }
+
+    });
+
 });

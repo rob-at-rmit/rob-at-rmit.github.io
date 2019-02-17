@@ -1,3 +1,12 @@
+/**
+ * DIG24 Programming for Digital Design, Study Period 4 2018/2019.
+ * Assignment 3
+ * Robert Beardow, Student ID 19209676.
+ * 
+ * This is main CSS styling for the website with the exception of the
+ * coffee plunger which has a significant amount of CSS and cluttered up this file.
+ */
+
 body {
     width: 100%;
     margin: 0 auto 0 auto;
@@ -10,19 +19,23 @@ body {
     width: 1200px;
 }
 
-main {
-
-}
-
 header h1 {
-    margin: 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #DDD;
     padding: 0;
+    text-align: center;
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 3.6em;
 }
 
 #maingrid {
     display: grid;
     grid-template-columns: 340px auto ;
 }
+
+/*------------------------------------------------------------------------------
+/* All sections within content
+/*----------------------------------------------------------------------------*/
 
 #content {
     position: relative;
@@ -56,10 +69,7 @@ header h1 {
     margin: 0;
     padding: 0;
     font-size: 2em;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-
-#content section header {
+    font-family: 'Martel Sans', sans-serif;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
@@ -152,6 +162,10 @@ header h1 {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
+#content .subarticle-hovercontent.subarticle-hovercontent-dark {
+    color: #333;
+}
+
 #content .subarticle-detailedcontent {
     display: none;
     position: absolute;
@@ -182,15 +196,15 @@ header h1 {
 /*----------------------------------------------------------------------------*/
 
 #plantations .subarticle-1 {
-    background-image: url(img/backgrounds/singleorigin.png);
+    background-image: url(../img/backgrounds/singleorigin.png);
 }
 
 #plantations .subarticle-2 {
-    background-image: url(img/backgrounds/arabica.png);
+    background-image: url(../img/backgrounds/arabica.png);
 }
 
 #plantations .subarticle-3 {
-    background-image: url(img/backgrounds/robusta.png);
+    background-image: url(../img/backgrounds/robusta.png);
 }
 
 /*------------------------------------------------------------------------------
@@ -198,15 +212,15 @@ header h1 {
 /*----------------------------------------------------------------------------*/
 
 #roasting .subarticle-1 {
-    background-image: url(img/backgrounds/darkroast.png);
+    background-image: url(../img/backgrounds/darkroast.png);
 }
 
 #roasting .subarticle-2 {
-    background-image: url(img/backgrounds/mediumroast.png);
+    background-image: url(../img/backgrounds/mediumroast.png);
 }
 
 #roasting .subarticle-3 {
-    background-image: url(img/backgrounds/lightroast.png);
+    background-image: url(../img/backgrounds/lightroast.png);
 }
 
 /*------------------------------------------------------------------------------
@@ -214,15 +228,15 @@ header h1 {
 /*----------------------------------------------------------------------------*/
 
 #grinding .subarticle-1 {
-    background-image: url(img/backgrounds/finegrind.png);
+    background-image: url(../img/backgrounds/finegrind.png);
 }
 
 #grinding .subarticle-2 {
-    background-image: url(img/backgrounds/mediumgrind.png);
+    background-image: url(../img/backgrounds/mediumgrind.png);
 }
 
 #grinding .subarticle-3 {
-    background-image: url(img/backgrounds/coarsegrind.png);
+    background-image: url(../img/backgrounds/coarsegrind.png);
 }
 
 /*------------------------------------------------------------------------------
@@ -230,18 +244,20 @@ header h1 {
 /*----------------------------------------------------------------------------*/
 
 #preparation .subarticle-1 {
-    background-image: url(img/backgrounds/espresso.png);
+    background-image: url(../img/backgrounds/espresso.png);
 }
 
 #preparation .subarticle-2 {
-    background-image: url(img/backgrounds/frenchpress.png);
+    background-image: url(../img/backgrounds/frenchpress.png);
 }
 
 #preparation .subarticle-3 {
-    background-image: url(img/backgrounds/filter.png);
+    background-image: url(../img/backgrounds/filter.png);
 }
 
-
+/*------------------------------------------------------------------------------
+/* Footer styles
+/*----------------------------------------------------------------------------*/
 
 footer {
     text-align: left;
