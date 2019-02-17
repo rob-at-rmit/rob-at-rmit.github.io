@@ -284,17 +284,26 @@ $(function() {
         current.fadeOut("slow").promise().then(() => target.fadeIn("slow"));
     };
 
+    const topicNavButtons = $(".topic-navbutton");
+    const plungerNavButtons = plungerNav.find("a[data-target]");
+
+    const togglePlungerNav = (target) => {
+        plungerNavButtons.removeClass("on");
+        target.addClass("on");
+    };
+
     /**
      * Handle navigation of the topic next/previous buttons
      */
-    const navButtons = $(".topic-navbutton");
-    navButtons.on("click", function(e) {
+    topicNavButtons.on("click", function(e) {
 
         const button = $(this);
         const topic = button.parents("section");
         const targetId = button.data("target");
         const target = $("#" + targetId);
+        const plungerButton = plungerNav.find('*[data-target="' + targetId + '"]');
 
+        togglePlungerNav(plungerButton);
         animatePlungerToStep(targetId);
         transitionTopics(topic, target);
 
@@ -303,7 +312,7 @@ $(function() {
     /**
      * Handle navigation of the plunger navigation options
      */
-    const plungerNavButtons = plungerNav.find("a[data-target]");
+    
     plungerNavButtons.on("click", function(e) {
 
         const button = $(this);
@@ -313,8 +322,7 @@ $(function() {
         const alreadySelected = button.hasClass("on");
 
         if (!alreadySelected) {
-            plungerNavButtons.removeClass("on");
-            button.addClass("on");
+            togglePlungerNav(button);
             animatePlungerToStep(targetId);
             transitionTopics(topic, target);
         }
